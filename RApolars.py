@@ -14,6 +14,4 @@ for col in ['page_id', 'currency']:
     print(vc_df)
 
 print("\n== Number of Unique Values per Column ==")
-print(df.select([
-    pl.col(col).n_unique().alias(f"{col}_nunique") for col in df.columns
-]))
+print(df.select([    pl.col(col).n_unique().alias(f"{col}_nunique") for col in df.columns]))
